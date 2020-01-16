@@ -1,0 +1,106 @@
+{
+  "input_datatypes": [ ],
+  "input_namespaces": [ ],
+  "output_namespace": "",
+  "input_groups": [
+    { "name": "UCD", "label": "UCD" },
+    { "name": "VM", "label": "VM" }
+  ],
+  "output_groups": [ ],
+  "template_input_params": [
+    {
+      "name": "ucd_user",
+      "label": "Ucd User",
+      "description": "",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "UCD",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ucd_password",
+      "label": "Ucd Password",
+      "description": "",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "UCD",
+      "required": true,
+      "secured": true,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ucd_server_url",
+      "label": "Ucd Server Url",
+      "description": "",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "UCD",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "subnet_id",
+      "label": "subnet_id",
+      "description": "",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "VM",
+      "required": false,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "security_group_id",
+      "label": "Security Group Id",
+      "description": "",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "VM",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "server_name",
+      "label": "server_name",
+      "description": "",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "VM",
+      "required": false,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    }
+  ],
+  "template_output_params": [  {
+    "name": "agent_name",
+    "label": "Agent Name",
+    "description": "",
+    "group_name": "",
+    "secured": false,
+    "hidden": false,
+    "shortname": "",
+    "type": "string"
+  } ]
+}

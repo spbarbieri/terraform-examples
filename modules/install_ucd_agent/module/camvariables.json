@@ -1,0 +1,128 @@
+{
+  "input_datatypes": [ ],
+  "input_namespaces": [ ],
+  "output_namespace": "",
+  "input_groups": [
+    { "name": "VM", "label": "VM" },
+    { "name": "UCD", "label": "UCD" },
+    {
+      "name": "instances",
+      "label": "Instances"
+    },
+    {
+      "name": "aws_instance_networks",
+      "label": "aws_instance Networks"
+    }
+  ],
+  "output_groups": [ ],
+  "template_input_params": [
+     {
+      "name": "agent_name",
+      "label": "Agent Name",
+      "description": "Agent name prefix. A random ID will be appended to this name to guarantee uniqueness.",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "UCD",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ucd_user",
+      "label": "Ucd User",
+      "description": "UrbanCode Deploy user",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "UCD",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ucd_password",
+      "label": "Ucd Password",
+      "description": "UrbanCode Deploy password",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "UCD",
+      "required": true,
+      "secured": true,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ucd_server_url",
+      "label": "Ucd Server Url",
+      "description": "UrbanCode Deploy server URL",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "UCD",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "host",
+      "label": "Host",
+      "description": "Hostname or IP address of the server",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "user",
+      "label": "User",
+      "description": "VM user",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "private_key",
+      "label": "Private Key",
+      "description": "Private key used to connect to the server",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "VM",
+      "required": true,
+      "secured": true,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    }
+   ],
+  "template_output_params": [  {
+    "name": "agent_name",
+    "label": "agent_name",
+    "description": "",
+    "group_name": "",
+    "secured": false,
+    "hidden": false,
+    "shortname": "",
+    "type": "string"
+  } ]
+}
