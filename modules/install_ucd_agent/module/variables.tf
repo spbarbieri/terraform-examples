@@ -19,6 +19,18 @@ variable "ucd_server_url" {
   description = "UrbanCode Deploy server URL"
 }
 
+variable "agent_package_version" {
+  type = "string"
+  description = "Agent package component version"
+  default = "8.0"
+}
+
+variable "os_type" {
+  type = "string"
+  description = "Operating system type. Valid values are linux, aix, or windows."
+  default = "linux"
+}
+
 variable "host" {
  type = "string"
  description = "Hostname or IP address of the server"

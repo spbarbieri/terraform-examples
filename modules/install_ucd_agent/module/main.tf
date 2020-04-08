@@ -10,6 +10,9 @@ resource "null_resource" "install_agent" {
     ucd_server_url  = "${var.ucd_server_url}"
     ucd_user        = "${var.ucd_user}"
     ucd_password    = "${var.ucd_password}"
+    agent_package_version = "${var.agent_package_version}"
+    os_type = "${var.os_type}"
+    
   }
   provisioner "local-exec" {
     when = "destroy"

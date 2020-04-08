@@ -4,31 +4,24 @@
   "output_namespace": "",
   "input_groups": [
     { "name": "VM", "label": "VM" },
-    { "name": "UCD", "label": "UCD" },
-    {
-      "name": "instances",
-      "label": "Instances"
-    },
-    {
-      "name": "aws_instance_networks",
-      "label": "aws_instance Networks"
-    }
+    { "name": "UCD", "label": "UCD" }
   ],
   "output_groups": [ ],
   "template_input_params": [
-     {
+    {
       "name": "agent_name",
       "label": "Agent Name",
       "description": "Agent name prefix. A random ID will be appended to this name to guarantee uniqueness.",
       "type": "string",
       "default": "",
-      "validation": "",
+      "regex": "",
       "group_name": "UCD",
       "required": true,
       "secured": false,
       "hidden": false,
       "immutable": false,
-      "immutable_after_create": false
+      "immutable_after_create": false,
+      "validation": ""
     },
     {
       "name": "ucd_user",
@@ -36,13 +29,14 @@
       "description": "UrbanCode Deploy user",
       "type": "string",
       "default": "",
-      "validation": "",
+      "regex": "",
       "group_name": "UCD",
       "required": true,
       "secured": false,
       "hidden": false,
       "immutable": false,
-      "immutable_after_create": false
+      "immutable_after_create": false,
+      "validation": ""
     },
     {
       "name": "ucd_password",
@@ -50,13 +44,14 @@
       "description": "UrbanCode Deploy password",
       "type": "string",
       "default": "",
-      "validation": "",
+      "regex": "",
       "group_name": "UCD",
       "required": true,
       "secured": true,
       "hidden": false,
       "immutable": false,
-      "immutable_after_create": false
+      "immutable_after_create": false,
+      "validation": ""
     },
     {
       "name": "ucd_server_url",
@@ -64,9 +59,38 @@
       "description": "UrbanCode Deploy server URL",
       "type": "string",
       "default": "",
-      "validation": "",
+      "regex": "",
       "group_name": "UCD",
       "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false,
+      "validation": ""
+    },
+    {
+      "name": "agent_package_version",
+      "label": "agent_package_version",
+      "description": "Agent package component version",
+      "type": "string",
+      "default": "8.0",
+      "regex": "",
+      "group_name": "UCD",
+      "required": false,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "os_type",
+      "label": "os_type",
+      "description": "Operating system type. Valid values are linux, aix, or windows.",
+      "type": "string",
+      "default": "linux",
+      "regex": "",
+      "group_name": "UCD",
+      "required": false,
       "secured": false,
       "hidden": false,
       "immutable": false,
@@ -78,13 +102,14 @@
       "description": "Hostname or IP address of the server",
       "type": "string",
       "default": "",
-      "validation": "",
-      "group_name": "",
+      "regex": "",
+      "group_name": "UCD",
       "required": true,
       "secured": false,
       "hidden": false,
       "immutable": false,
-      "immutable_after_create": false
+      "immutable_after_create": false,
+      "validation": ""
     },
     {
       "name": "user",
@@ -92,13 +117,14 @@
       "description": "VM user",
       "type": "string",
       "default": "",
-      "validation": "",
-      "group_name": "",
+      "regex": "",
+      "group_name": "VM",
       "required": true,
       "secured": false,
       "hidden": false,
       "immutable": false,
-      "immutable_after_create": false
+      "immutable_after_create": false,
+      "validation": ""
     },
     {
       "name": "private_key",
@@ -106,15 +132,16 @@
       "description": "Private key used to connect to the server",
       "type": "string",
       "default": "",
-      "validation": "",
+      "regex": "",
       "group_name": "VM",
       "required": true,
       "secured": true,
       "hidden": false,
       "immutable": false,
-      "immutable_after_create": false
+      "immutable_after_create": false,
+      "validation": ""
     }
-   ],
+  ],
   "template_output_params": [  {
     "name": "agent_name",
     "label": "agent_name",

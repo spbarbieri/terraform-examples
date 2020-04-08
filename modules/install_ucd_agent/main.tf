@@ -81,4 +81,6 @@ module "install_agent" {
   ucd_user = "${var.ucd_user}"
   ucd_password = "${var.ucd_password}"
   ucd_server_url = "${var.ucd_server_url}"
+  agent_package_version = "8.0"
+  os_type = "linux"
 }
